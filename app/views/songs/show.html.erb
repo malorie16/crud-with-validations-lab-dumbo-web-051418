@@ -1,0 +1,10 @@
+<%= @song.title %>
+<%= @song.artist_name %>
+<%= @song.released %>
+<%= @song.release_year %>
+<%= @song.genre %>
+<%= link_to "Edit this song", edit_song_path(@song) %>
+<%= link_to "Delete this song", @song, method: :delete, data: {confirm: "Are you sure?"} %>
+<%=  form_for @song, method: :delete do |f| %>
+  <%= f.submit 'Delete this song' %>
+<% end %>
